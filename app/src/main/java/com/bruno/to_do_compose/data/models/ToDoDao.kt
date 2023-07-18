@@ -9,7 +9,7 @@ import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface ToDoDao {
+interface ToDoDao { //Data Access Object
 
     @Query("SELECT * FROM todo_table ORDER BY id ASC")
     fun getAllTasks(): Flow<List<ToDoTask>>
